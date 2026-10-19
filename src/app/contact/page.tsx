@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import { siteConfig } from "@/data/content";
 
+import { addLead } from "@/lib/leadsStorage";
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -26,6 +28,14 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    addLead({
+      name: formData.name,
+      businessName: formData.businessName,
+      mobile: formData.mobile,
+      workNeeded: formData.workNeeded,
+      description: formData.description,
+      preferredContact: formData.preferredContact,
+    });
     setSubmitted(true);
   };
 
