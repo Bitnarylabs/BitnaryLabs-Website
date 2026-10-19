@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   authors: [{ name: "BitnaryLabs" }],
 };
 
+import { SiteShell } from "@/components/SiteShell";
+
 export default function RootLayout({
   children,
 }: {
@@ -37,9 +39,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-[#07090e] text-slate-100 selection:bg-blue-600 selection:text-white">
-        <Navbar />
-        <main className="flex-grow pt-20">{children}</main>
-        <Footer />
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );
