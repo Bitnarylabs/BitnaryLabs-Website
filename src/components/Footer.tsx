@@ -112,6 +112,7 @@ export function Footer() {
             <Link href="/about" className="hover:text-neutral-400">About</Link>
             <Link href="/pricing" className="hover:text-neutral-400">Pricing</Link>
             <Link href="/contact" className="hover:text-neutral-400">Contact</Link>
+            <Link href="/admin" className="hover:text-cyan-400 text-neutral-400 font-medium">Admin Panel</Link>
           </div>
         </div>
       </div>
